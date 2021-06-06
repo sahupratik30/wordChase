@@ -21,8 +21,10 @@
 
 ## Screenshots
 
-![Screenshot](https://user-images.githubusercontent.com/80754608/120926575-17018a80-c6fb-11eb-8b92-1e30bb1b290d.png)
-![Screenshot](https://user-images.githubusercontent.com/80754608/120926721-b7f04580-c6fb-11eb-8649-efd4077cf7fb.png)
+![Screenshot](https://user-images.githubusercontent.com/80754608/120931781-bf6e1980-c710-11eb-994c-3cb7ecaf1baf.png)
+![Screenshot](https://user-images.githubusercontent.com/80754608/120931726-7e760500-c710-11eb-962c-800aab728d4f.png)
+![Screenshot](https://user-images.githubusercontent.com/80754608/120931900-2f7c9f80-c711-11eb-84f3-f71dcd37f5b2.png)
+![Screenshot](https://user-images.githubusercontent.com/80754608/120932011-b3cf2280-c711-11eb-9198-0cad6d030d83.png)
 
 ## Link to view the App
  - Link- `https://wordchase-b7be1.web.app/`
