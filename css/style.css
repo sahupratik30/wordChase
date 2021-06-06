@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+#input-word {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+header {
+  position: relative;
+}
+#word {
+  text-transform: lowercase;
+}
+label {
+  font-size: 15px;
+}
+.difficulty {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
+.form-control:focus,
+.form-control {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+@media (max-width: 360px) {
+  #word {
+    font-size: 40px;
+  }
+}
