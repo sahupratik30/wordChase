@@ -5,6 +5,7 @@
 
  - HTML
  - CSS
+ - Bootstrap
  - Vanilla Javascript
 
 ## Deployment
