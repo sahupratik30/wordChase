@@ -29,8 +29,18 @@ label {
   outline: none;
   box-shadow: none;
 }
+.button_div {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
 @media (max-width: 360px) {
   #word {
     font-size: 40px;
+  }
+}
+@media (max-width: 280px) {
+  #para {
+    font-size: 14px;
   }
 }

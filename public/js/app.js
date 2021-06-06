@@ -1,4 +1,3 @@
-window.addEventListener("load", init);
 //Levels
 const levels = {
   easy: 8,
@@ -12,6 +11,7 @@ let score = 0;
 let isPlaying;
 
 //DOM Elements.
+const button = document.getElementById("start-btn");
 const inputWord = document.getElementById("input-word");
 const currentWord = document.getElementById("word");
 const seconds = document.getElementById("seconds");
@@ -20,8 +20,13 @@ const timeDisplay = document.getElementById("time");
 const scoreDisplay = document.getElementById("score");
 const difficulty = document.getElementById("difficulty");
 seconds.innerHTML = currentLevel;
+difficulty.addEventListener("change", changeDifficulty);
+button.addEventListener("click", init);
 
 function init() {
+  isPlaying = true;
+  //Disable the start button
+  button.disabled = true;
   //Load random word
   loadWord();
   //Start matching inputWord with currentWord
@@ -35,7 +40,7 @@ function init() {
 function startMatch() {
   if (matchWord()) {
     isPlaying = true;
-    time = currentLevel + 1;
+    time = currentLevel;
     loadWord();
     inputWord.value = "";
     score++;
@@ -69,13 +74,17 @@ async function loadWord() {
 //Function to CountDown time.
 function countDown() {
   //Check if time is not run out
-  if (time > 0) {
+  if (time > 0 && isPlaying) {
     //Decrease time
     time--;
   } else if (time === 0) {
     isPlaying = false;
   }
-  timeDisplay.innerHTML = time;
+  if (isPlaying) {
+    timeDisplay.innerHTML = time;
+  } else {
+    timeDisplay.innerHTML = 0;
+  }
 }
 //Function to check status of the game.
 function checkStatus() {
@@ -83,7 +92,6 @@ function checkStatus() {
     message.style.color = "red";
     message.innerHTML = "Game Over!";
     score = -1;
-    difficulty.addEventListener("change", changeDifficulty);
   }
 }
 
@@ -94,11 +102,14 @@ function changeDifficulty() {
   if (level == "Easy") {
     currentLevel = levels.easy;
     seconds.innerHTML = currentLevel;
+    time = currentLevel;
   } else if (level == "Medium") {
     currentLevel = levels.medium;
     seconds.innerHTML = currentLevel;
+    time = currentLevel;
   } else {
     currentLevel = levels.hard;
     seconds.innerHTML = currentLevel;
+    time = currentLevel;
   }
 }
