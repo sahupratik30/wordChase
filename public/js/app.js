@@ -25,6 +25,8 @@ button.addEventListener("click", init);
 
 function init() {
   isPlaying = true;
+  //Autofocus on input box
+  inputWord.focus();
   //Disable the start button
   button.disabled = true;
   //Load random word
