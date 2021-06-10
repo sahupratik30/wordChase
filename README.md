@@ -15,7 +15,7 @@
 ## Any contributions are appreciated
 ```
  - Fork this repository
- - Clone it to your PC - https://github.com/sahupratik30/wordChase.git
+ - Clone it to your PC - https://github.com/<your-username>/wordChase.git
  - Make changes
  - Generate a pull request
 ```
