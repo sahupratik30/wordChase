@@ -9,6 +9,7 @@ let currentLevel = levels.easy;
 let time = currentLevel;
 let score = 0;
 let isPlaying;
+let highScore = 0;
 
 //DOM Elements.
 const button = document.getElementById("start-btn");
@@ -18,10 +19,14 @@ const seconds = document.getElementById("seconds");
 const message = document.getElementById("message");
 const timeDisplay = document.getElementById("time");
 const scoreDisplay = document.getElementById("score");
+const high_score = document.getElementById("highscore");
 const difficulty = document.getElementById("difficulty");
+const resetBtn = document.getElementById("reset-btn");
+window.addEventListener("load", setHighScore);
 seconds.innerHTML = currentLevel;
 difficulty.addEventListener("change", changeDifficulty);
 button.addEventListener("click", init);
+resetBtn.addEventListener("click", resetScore);
 
 function init() {
   isPlaying = true;
@@ -93,10 +98,27 @@ function checkStatus() {
   if (!isPlaying && time === 0) {
     message.style.color = "red";
     message.innerHTML = "Game Over!";
+    //Set the highscore
+    if (score > localStorage.getItem("highscore")) {
+      highScore = score;
+      localStorage.setItem("highscore", highScore);
+    }
+    //Call function to set the high score.
+    setHighScore();
     score = -1;
   }
 }
-
+//Function to set the high score.
+function setHighScore() {
+  high_score.innerHTML = localStorage.getItem("highscore");
+}
+//Function to reset the high score.
+function resetScore() {
+  if (window.confirm("Are you sure to reset the high score?")) {
+    localStorage.setItem("highscore", 0);
+    high_score.innerHTML = localStorage.getItem("highscore");
+  }
+}
 //Function to change difficulty level.
 function changeDifficulty() {
   //Get the chosen difficulty level

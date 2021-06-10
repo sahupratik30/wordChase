@@ -57,15 +57,27 @@
       </div>
       <!-- Time & Score part -->
       <div class="row text-center mt-5">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <h3>Time Left: <span class="text-danger" id="time">0</span></h3>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <h3>Score: <span class="text-success" id="score">0</span></h3>
         </div>
+        <div class="col-md-4">
+          <h3>
+            High Score: <span class="text-warning" id="highscore">0</span>
+          </h3>
+        </div>
       </div>
-      <div class="button_div">
-        <button class="btn btn-success" id="start-btn">Start Game</button>
+      <div class="row button_wrapper my-2">
+        <div class="button_div col-md-2">
+          <button class="btn btn-success" id="start-btn">Start Game</button>
+        </div>
+        <div class="button_div col-md-2">
+          <button class="btn btn-danger" id="reset-btn">
+            Reset High Score
+          </button>
+        </div>
       </div>
       <!-- Instructions part-->
       <div class="row text-center mt-1">

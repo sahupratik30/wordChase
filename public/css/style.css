@@ -29,10 +29,19 @@ label {
   outline: none;
   box-shadow: none;
 }
+.button_wrapper {
+  display: flex;
+  justify-content: center;
+}
 .button_div {
   display: flex;
   justify-content: center;
   padding: 10px 0;
+}
+.btn:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 @media (max-width: 360px) {
   #word {
