@@ -1,4 +1,6 @@
 ## About the project
+![Badge](https://img.shields.io/badge/wordChase-Game-green)
+
   A word typing game that checks the user's typing speed.
 
 ## Technologies Used
