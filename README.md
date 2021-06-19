@@ -8,7 +8,7 @@
  - HTML
  - CSS
  - Bootstrap
- - Vanilla Javascript
+ - Vanilla JavaScript
 
 ## Deployment
   <img align="left" alt="firebase" width="35px" src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" />
